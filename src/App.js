@@ -1,9 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import * as Sentry from "@sentry/react";
 
 function App() {
+  useEffect(() => {
+    Sentry.logger.warn("test log");
+  }, []);
   return (
     <div className="App">
+      <button
+          type="button"
+          onClick={() => {}}
+        >
+         sss
+        </button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,14 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <button
-          type="button"
-          onClick={() => {
-            throw new Error("Sentry Test Error");
-          }}
-        >
-          Break the world
-        </button>
+        
       </header>
     </div>
   );
