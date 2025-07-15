@@ -1,14 +1,13 @@
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn: "https://65767c9525699c15f9009e5980e6815e@o4508337845829632.ingest.us.sentry.io/4508405316714496",
+  dsn: "https://fe3aeb39db9590ea8885c801e3c6c62d@o4508337845829632.ingest.us.sentry.io/4509138107826177",
   integrations: [
     Sentry.consoleLoggingIntegration({ levels: ["log", "error", "warn"] }),
   ],
   _experiments: {
     enableLogs: true,
     beforeSendLog: (event) => {
-      console.log("beforeSendLog", event);
       return event;
     },
   },

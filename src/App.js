@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import * as Sentry from "@sentry/react";
+
+console.log("gets logged x1");
 
 function App() {
   useEffect(() => {
-    Sentry.logger.warn("test log");
+    console.log("gets logged x2");
   }, []);
   return (
     <div className="App">
